@@ -1,4 +1,11 @@
 .classBlock {
     position: relative;
     background-color: blue;
+    margin: 0;
+    padding: 0;
+}
+
+.classBlock p {
+    margin: 0;
+    padding: 0;
 }

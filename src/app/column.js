@@ -2,7 +2,10 @@ import ClassBlock from "./classBlock.js";
 
 export default function Column({ day, classes, timeStart, timeEnd, height }) {;
     function mapToClassBlock(classData) {;
-        return (<ClassBlock name={classData.name} timeStart={classData.timeStart} timeEnd={classData.timeEnd} columnTimeStart={timeStart} columnTimeEnd={timeEnd} columnHeight={height}/>);
+        return (
+            <ClassBlock name={classData.name} timeStart={classData.timeStart}
+            timeEnd={classData.timeEnd} columnTimeStart={timeStart} columnTimeEnd={timeEnd} columnHeight={height}/>
+        );
     }
 
     return (
