@@ -8,12 +8,14 @@ export default function Column({ day, classes, timeStart, timeEnd, height }) {;
         );
     }
 
+    const hourGap = height / (timeEnd - timeStart);
+    const background = "repeating-linear-gradient(0deg, #fff, #fff " + hourGap + "px, #ccc " + hourGap + "px, #ccc " + hourGap * 2 + "px)"
     return (
-        <div className="column" style={{height: height}}>
+        <div className="column">
             <div className="columnHeader">
                 <p>{day}</p>
             </div>
-            <div className="columnContent">
+            <div className="columnContent" style={{height: height, background: background}}>
                 {classes.map(mapToClassBlock)}
             </div>
         </div>
