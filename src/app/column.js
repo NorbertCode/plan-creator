@@ -1,4 +1,5 @@
 import ClassBlock from "./classBlock.js";
+import ColumnHeader from "./columnHeader.js";
 
 function convertToDate(dateStr) {
     const dateSplit = dateStr.split(".");
@@ -35,9 +36,7 @@ export default function Column({ day, date, plan, timeStart, timeEnd, height }) 
 
     return (
         <div className="column">
-            <div className="columnHeader">
-                <p>{day} {date}</p>
-            </div>
+            <ColumnHeader day={day} date={date}/>
             <div className="columnContent" style={{height: height, background: background}}>
                 {currentDayClasses.map((item, index) => mapToClassBlock(item, index))}
             </div>
