@@ -1,9 +1,9 @@
 import ClassBlock from "./classBlock.js";
 
-export default function Column({ day, classes, timeStart, timeEnd, height }) {;
-    function mapToClassBlock(classData) {;
+export default function Column({ day, date, classes, timeStart, timeEnd, height }) {;
+    function mapToClassBlock(classData, index) {;
         return (
-            <ClassBlock name={classData.name} timeStart={classData.timeStart}
+            <ClassBlock key={index} name={classData.name} timeStart={classData.timeStart}
             timeEnd={classData.timeEnd} columnTimeStart={timeStart} columnTimeEnd={timeEnd} columnHeight={height}/>
         );
     }
@@ -13,10 +13,10 @@ export default function Column({ day, classes, timeStart, timeEnd, height }) {;
     return (
         <div className="column">
             <div className="columnHeader">
-                <p>{day}</p>
+                <p>{date}</p>
             </div>
             <div className="columnContent" style={{height: height, background: background}}>
-                {classes.map(mapToClassBlock)}
+                {classes.map((item, index) => mapToClassBlock(item, index))}
             </div>
         </div>
     );
