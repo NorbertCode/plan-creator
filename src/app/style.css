@@ -17,7 +17,7 @@ body {
 }
 
 .column {
-    width: 85vw;
+    width: 75vw;
 }
 
 .columnHeader {
@@ -49,6 +49,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 6px;
+    text-align: right;
 }
 
 .leftSide {

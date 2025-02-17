@@ -14,8 +14,8 @@ let weekday = date.getDay();
 export default function Page() {
     const dateIncrement = 1;
     const height = 600;
-    const timeStart = 800;
-    const timeEnd = 2000;
+    const timeStart = 700;
+    const timeEnd = 2100;
 
     const [dateStr, setDate] = useState(formatDate(date));
     function moveDate(increment) {
