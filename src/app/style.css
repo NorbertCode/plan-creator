@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+    background-color: #141313;
+    color: #F1E9DB;
+    font-family: "Work Sans";
+}
+
 .content {
     display: flex;
     margin: auto;
@@ -25,19 +32,37 @@
     left: 0;
     right: 0;
     width: 95%;
+    box-sizing: border-box;
     margin: 0 auto 0 auto;
-    padding: 0;
-    background-color: blue;
+    padding: 6px;
+    background-color: #4062BB;
 }
 
 .timeBlock {
-    border: 2px black solid;
+    background-color: #231F20;
+    border: 2px solid #292626;
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 6px;
 }
 
 .classBlock p, .timeBlock p {
     margin: 0;
     padding: 0;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.dateSwitch {
+    background-color: #231F20;
+    color: #F1E9DB;
+    border: 2px solid #292626;
+    font-size: 2em;
+    width: 50vw;
+    height: 5vh;
+    margin: 1vw 2vw 1vw 2vw;
 }

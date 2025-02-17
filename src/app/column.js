@@ -11,7 +11,7 @@ export default function Column({ day, date, plan, timeStart, timeEnd, height }) 
     }
 
     const hourGap = height / timeToFloat(timeEnd - timeStart);
-    const background = "repeating-linear-gradient(0deg, #fff, #fff " + hourGap + "px, #ccc " + hourGap + "px, #ccc " + hourGap * 2 + "px)"
+    const background = "repeating-linear-gradient(0deg, #231F20, #231F20 " + hourGap + "px, #292626 " + hourGap + "px, #292626 " + hourGap * 2 + "px)"
 
     const currentDayClasses = [];
     for (let i = 0; i < plan.length; i++) {
