@@ -1,21 +1,18 @@
 .content {
-    width: auto;
-    height: 5px;
+    display: flex;
     margin: auto;
 }
 .timeColumn {
     width: 15vw;
-    float: left;
     margin: 0;
 }
 
 .column {
-    width: 80vw;
-    float: left;
-    margin: 0 1vw 0 1vw;
+    width: 85vw;
 }
 
 .columnHeader {
+    text-align: center;
     height: 5vh;
 }
 
@@ -43,8 +40,4 @@
 .classBlock p, .timeBlock p {
     margin: 0;
     padding: 0;
-}
-
-.controls {
-    clear: both;
 }
