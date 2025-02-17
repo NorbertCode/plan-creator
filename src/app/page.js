@@ -11,6 +11,7 @@ let weekday = date.getDay();
 
 export default function Page() {
     const dateIncrement = 1;
+    const height = 600;
     const timeStart = 800;
     const timeEnd = 2000;
     const plan = [
@@ -50,10 +51,15 @@ export default function Page() {
     function decrementDate() { moveDate(-dateIncrement); }
     
     return (
-        <div>
-            <DateSwitch onClick={decrementDate} text="<"/>
-            <DateSwitch onClick={incrementDate} text=">"/>
-            <TimeColumn timeStart={timeStart} timeEnd={timeEnd} height={600}/>
-        </div>
+        <main>
+            <div className="content">
+                <TimeColumn timeStart={timeStart} timeEnd={timeEnd} height={height}/>
+                <Column day={weekday} date={dateStr} plan={plan} timeStart={timeStart} timeEnd={timeEnd} height={height}/>
+            </div>
+            <div className="controls">
+                <DateSwitch onClick={decrementDate} text="<"/>
+                <DateSwitch onClick={incrementDate} text=">"/>
+            </div>
+        </main>
     );
 }
