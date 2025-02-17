@@ -1,0 +1,44 @@
+[
+    {
+        "day": 1,
+        "classes": [
+            {
+                "name": "A",
+                "timeStart": 1130,
+                "timeEnd": 1315,
+                "dateStart": "17.2.2025",
+                "dateEnd": "17.3.2025",
+                "type": "Wykład",
+                "place": "s. 123"
+            }
+        ]
+    },
+    {
+        "day": 2,
+        "classes": [
+            {
+                "name": "B",
+                "timeStart": 1500,
+                "timeEnd": 1600,
+                "dateStart": "17.1.2025",
+                "dateEnd": "17.2.2025",
+                "type": "Ćwiczenia",
+                "place": "s. 456"
+            }
+        ]
+    },
+    {
+        "day": 3,
+        "classes": [
+            {
+                "name": "C",
+                "timeStart": 900,
+                "timeEnd": 1400,
+                "dateStart": "01.01.2025",
+                "dateEnd": "01.12.2025",
+                "type": "C",
+                "place": "s. 789"
+            }
+        ]
+    }
+]
