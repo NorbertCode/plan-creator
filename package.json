@@ -1,11 +1,7 @@
 {
   "name": "plan-creator",
   "version": "0.1.0",
-<<<<<<< HEAD
   "homepage": "https://norbertcode.github.io/src/app",
-=======
-  "homepage": "https://norbertcode.github.io/",
->>>>>>> bbaa6fe44bafe164d4726596648e202f7626533c
   "private": true,
   "scripts": {
     "predeploy": "npm run build",
