@@ -83,3 +83,8 @@ body {
     margin: 1vh 1vw 0 1vw;
     border-radius: 10px;
 }
+
+.dateSwitch:active {
+    background-color: #292626;
+    border-color: #231F20;
+}
