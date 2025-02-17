@@ -1,18 +1,9 @@
 import ClassBlock from "./classBlock.js";
 import ColumnHeader from "./columnHeader.js";
+import { isDateBetween } from "./utils.js";
 
-function convertToDate(dateStr) {
-    const dateSplit = dateStr.split(".");
-    return new Date(dateSplit[2], dateSplit[1] - 1, dateSplit[0]);
-}
-
-function isDateBetween(currentDateStr, startDateStr, endDateStr) {
-    const currentDate = convertToDate(currentDateStr);
-    return convertToDate(startDateStr) <= currentDate && currentDate <= convertToDate(endDateStr);
-}
-
-export default function Column({ day, date, plan, timeStart, timeEnd, height }) {;
-    function mapToClassBlock(classData, index) {;
+export default function Column({ day, date, plan, timeStart, timeEnd, height }) {
+    function mapToClassBlock(classData, index) {
         return (
             <ClassBlock key={index} name={classData.name} timeStart={classData.timeStart}
             timeEnd={classData.timeEnd} columnTimeStart={timeStart} columnTimeEnd={timeEnd} columnHeight={height}/>

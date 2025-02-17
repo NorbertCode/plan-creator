@@ -3,13 +3,7 @@ import { useState } from "react";
 
 import Column from "./column.js";
 import DateSwitch from "./dateSwitch.js";
-
-function formatDate(date) {
-    const day = date.getDate();
-    const month = date.getMonth() + 1;
-    const year = date.getYear() + 1900;
-    return day + "." + month + "." + year;
-}
+import { formatDate } from "./utils.js";
 
 const date = new Date(Date.now()); // Holds the date as a modifiable object
 let weekday = date.getDay();
