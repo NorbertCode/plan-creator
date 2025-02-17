@@ -1,3 +1,7 @@
+.columnContent {
+    position: relative;
+}
+
 .classBlock {
     position: absolute;
     left: 0;
@@ -8,11 +12,13 @@
     background-color: blue;
 }
 
-.classBlock p {
+.timeBlock {
+    border: 2px black solid;
     margin: 0;
     padding: 0;
 }
 
-.columnContent {
-    position: relative;
+.classBlock p, .timeBlock p {
+    margin: 0;
+    padding: 0;
 }
