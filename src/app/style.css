@@ -40,6 +40,7 @@ body {
     margin: 0 auto 0 auto;
     padding: 6px;
     border-radius: 10px;
+    font-size: 1.1em;
 }
 
 .timeBlock {
@@ -48,6 +49,15 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 6px;
+}
+
+.leftSide {
+    float: left;
+}
+
+.rightSide {
+    float: right;
+    text-align: right;
 }
 
 .classBlock p, .timeBlock p {

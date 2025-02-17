@@ -11,9 +11,14 @@ export default function ClassBlock({ data, columnTimeStart, columnTimeEnd, colum
 
     return (
         <div className="classBlock" style={{top: position, height: height}}>
-            <p>{data.name} - {data.type}</p>
-            <p>{timeToStr(data.timeStart)} - {timeToStr(data.timeEnd)}</p>
-            <p>{data.place}</p>
+            <div className="leftSide">
+                <p>{data.name}</p>
+                <p>{timeToStr(data.timeStart)} - {timeToStr(data.timeEnd)}</p>
+            </div>
+            <div className="rightSide">
+                <p>{data.type}</p>
+                <p>{data.place}</p>
+            </div>
         </div>
     );
 }
