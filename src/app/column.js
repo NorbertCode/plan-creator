@@ -1,6 +1,6 @@
 import ClassBlock from "./classBlock.js";
 import ColumnHeader from "./columnHeader.js";
-import { isDateBetween } from "./utils.js";
+import { isDateBetween, timeToFloat } from "./utils.js";
 
 export default function Column({ day, date, plan, timeStart, timeEnd, height }) {
     function mapToClassBlock(classData, index) {
@@ -10,7 +10,7 @@ export default function Column({ day, date, plan, timeStart, timeEnd, height }) 
         );
     }
 
-    const hourGap = height / (timeEnd - timeStart);
+    const hourGap = height / timeToFloat(timeEnd - timeStart);
     const background = "repeating-linear-gradient(0deg, #fff, #fff " + hourGap + "px, #ccc " + hourGap + "px, #ccc " + hourGap * 2 + "px)"
 
     const currentDayClasses = [];
