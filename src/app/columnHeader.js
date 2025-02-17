@@ -9,7 +9,10 @@ const days = [
 ];
 
 export default function ColumnHeader({ day, date }) {
-    const dayName = days[day];
+    let dayName = "";
+    if (day != null)
+        dayName = days[day];
+
     return (
         <div className="columnHeader">
             <p>{dayName} {date}</p>

@@ -4,14 +4,15 @@ import { useState } from "react";
 import Column from "./column.js";
 import DateSwitch from "./dateSwitch.js";
 import { formatDate } from "./utils.js";
+import TimeColumn from "./timeColumn.js";
 
 const date = new Date(Date.now()); // Holds the date as a modifiable object
 let weekday = date.getDay();
 
 export default function Page() {
     const dateIncrement = 1;
-    const timeStart = 8;
-    const timeEnd = 20;
+    const timeStart = 800;
+    const timeEnd = 2000;
     const plan = [
         {
             day: 1,
@@ -52,7 +53,7 @@ export default function Page() {
         <div>
             <DateSwitch onClick={decrementDate} text="<"/>
             <DateSwitch onClick={incrementDate} text=">"/>
-            <Column day={weekday} date={dateStr} plan={plan} timeStart={timeStart} timeEnd={timeEnd} height={600}/>
+            <TimeColumn timeStart={timeStart} timeEnd={timeEnd} height={600}/>
         </div>
     );
 }
