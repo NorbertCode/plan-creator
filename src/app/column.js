@@ -5,8 +5,7 @@ import { isDateBetween, timeToFloat } from "./utils.js";
 export default function Column({ day, date, plan, timeStart, timeEnd, height }) {
     function mapToClassBlock(classData, index) {
         return (
-            <ClassBlock key={index} name={classData.name} timeStart={classData.timeStart}
-            timeEnd={classData.timeEnd} columnTimeStart={timeStart} columnTimeEnd={timeEnd} columnHeight={height}/>
+            <ClassBlock key={index} data={classData} columnTimeStart={timeStart} columnTimeEnd={timeEnd} columnHeight={height}/>
         );
     }
 

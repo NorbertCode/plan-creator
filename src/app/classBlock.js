@@ -1,8 +1,8 @@
 import { timeToFloat, timeToStr } from "./utils";
 
-export default function ClassBlock({ name, timeStart, timeEnd, columnTimeStart, columnTimeEnd, columnHeight}) {
-    const timeStartFloat = timeToFloat(timeStart);
-    const timeEndFloat = timeToFloat(timeEnd)
+export default function ClassBlock({ data, columnTimeStart, columnTimeEnd, columnHeight}) {
+    const timeStartFloat = timeToFloat(data.timeStart);
+    const timeEndFloat = timeToFloat(data.timeEnd)
     const columnTimeStartFloat = timeToFloat(columnTimeStart);
     const columnTimeEndFloat = timeToFloat(columnTimeEnd);
     
@@ -11,8 +11,9 @@ export default function ClassBlock({ name, timeStart, timeEnd, columnTimeStart, 
 
     return (
         <div className="classBlock" style={{top: position, height: height}}>
-            <p>{name}</p>
-            <p>{timeToStr(timeStart)} - {timeToStr(timeEnd)}</p>
+            <p>{data.name} - {data.type}</p>
+            <p>{timeToStr(data.timeStart)} - {timeToStr(data.timeEnd)}</p>
+            <p>{data.place}</p>
         </div>
     );
 }

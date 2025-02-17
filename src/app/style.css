@@ -3,14 +3,16 @@ body {
     background-color: #141313;
     color: #F1E9DB;
     font-family: "Work Sans";
+    font-size: 0.8em;
 }
 
 .content {
     display: flex;
     margin: auto;
 }
+
 .timeColumn {
-    width: 15vw;
+    width: 25vw;
     margin: 0;
 }
 
@@ -21,6 +23,7 @@ body {
 .columnHeader {
     text-align: center;
     height: 5vh;
+    font-size: 1.2em;
 }
 
 .columnContent {
@@ -32,10 +35,11 @@ body {
     left: 0;
     right: 0;
     width: 95%;
+    background-color: #4062BB;
     box-sizing: border-box;
     margin: 0 auto 0 auto;
     padding: 6px;
-    background-color: #4062BB;
+    border-radius: 10px;
 }
 
 .timeBlock {
@@ -48,6 +52,7 @@ body {
 
 .classBlock p, .timeBlock p {
     margin: 0;
+    margin-bottom: 4px;
     padding: 0;
 }
 
@@ -62,7 +67,8 @@ body {
     color: #F1E9DB;
     border: 2px solid #292626;
     font-size: 2em;
-    width: 50vw;
+    width: 60vw;
     height: 5vh;
-    margin: 1vw 2vw 1vw 2vw;
+    margin: 1vh 1vw 0 1vw;
+    border-radius: 10px;
 }

@@ -23,7 +23,9 @@ export default function Page() {
                     timeStart: 1130,
                     timeEnd: 1315,
                     dateStart: "17.2.2025",
-                    dateEnd: "17.3.2025"
+                    dateEnd: "17.3.2025",
+                    type: "Wykład",
+                    place: "s. 123"
                 }
             ]
         },
@@ -35,7 +37,9 @@ export default function Page() {
                     timeStart: 1500,
                     timeEnd: 1600,
                     dateStart: "17.1.2025",
-                    dateEnd: "17.2.2025"
+                    dateEnd: "17.2.2025",
+                    type: "Ćwiczenia",
+                    place: "s. 456"
                 }
             ]
         }
