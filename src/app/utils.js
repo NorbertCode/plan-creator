@@ -18,7 +18,7 @@ export function isDateBetween(currentDateStr, startDateStr, endDateStr) {
 
 // --- Time functions ---
 export function timeToFloat(time) {
-    hours = time % 100;
-    seconds = (time / 100) / 60
+    const hours = Math.ceil(time / 100);
+    const seconds = (time % 100) / 60
     return hours + seconds
 }
