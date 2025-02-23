@@ -11,7 +11,7 @@ export default function ContentTable({ date, mode }) {
 
     const days = [];
     const totalDays = mode == "single" ? 1 : 5;
-    const startDate = mode == "single" ? date : getPreviousMonday(date);
+    const startDate = mode == "single" ? date : new Date(getPreviousMonday(date));
     for (let i = 0; i < totalDays; i++) {
         days.push((
             <ClassColumn key={i} day={startDate.getDay() + i} date={formatDate(getFutureDate(startDate, i))} plan={plan} timeStart={timeStart} timeEnd={timeEnd} height={height}/>
