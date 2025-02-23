@@ -21,6 +21,12 @@ export function isDateBetween(currentDateStr, startDateStr, endDateStr) {
     return convertToDate(startDateStr) <= currentDate && currentDate <= convertToDate(endDateStr);
 }
 
+export function getFutureDate(currentDate, incrementDays) {
+    const futureDate = new Date(currentDate);
+    futureDate.setDate(currentDate.getDate() + incrementDays);
+    return futureDate;
+}
+
 // --- Time functions ---
 export function timeToFloat(time) {
     const hours = Math.floor(time / 100);

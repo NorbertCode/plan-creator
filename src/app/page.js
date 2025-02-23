@@ -3,12 +3,12 @@ import { useState } from "react";
 
 import ClassColumn from "./classColumn.js";
 import DateSwitch from "./dateSwitch.js";
-import { formatDate } from "./utils.js";
+import { formatDate, getFutureDate } from "./utils.js";
 import TimeColumn from "./timeColumn.js";
 
 import plan from "./planData.json";
 
-const date = new Date(Date.now()); // Holds the date as a modifiable object
+let date = new Date(Date.now()); // Holds the date as a modifiable object
 let weekday = date.getDay();
 
 export default function Page() {
@@ -19,7 +19,7 @@ export default function Page() {
 
     const [dateStr, setDate] = useState(formatDate(date));
     function moveDate(increment) {
-        date.setDate(date.getDate() + increment);
+        date = getFutureDate(date, increment);
         weekday = date.getDay();
         setDate(formatDate(date));
     }
