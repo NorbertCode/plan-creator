@@ -1,8 +1,13 @@
 // --- Date functions ---
 export function formatDate(date) {
-    const day = date.getDate();
-    const month = date.getMonth() + 1;
-    const year = date.getYear() + 1900;
+    const day = date.getDate().toString();
+    let month = (date.getMonth() + 1).toString();
+    const year = (date.getYear() + 1900).toString();
+
+    if (month.length == 1) {
+        month = "0" + month;
+    }
+
     return day + "." + month + "." + year;
 }
 
