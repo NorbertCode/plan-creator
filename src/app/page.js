@@ -8,7 +8,7 @@ import { getFutureDate } from "./utils.js";
 
 export default function Page() {
     const [mode, setMode] = useState(window.innerHeight > window.innerWidth ? "single" : "multiple");
-    let dateIncrement = mode == "single" ? 1 : 5;
+    let dateIncrement = mode == "single" ? 1 : 7;
     function refreshMode() {
         if (window.innerHeight > window.innerWidth) {
             setMode("single");
@@ -16,7 +16,7 @@ export default function Page() {
         }
         else {
             setMode("week");
-            dateIncrement = 5;
+            dateIncrement = 7;
         }
     }
     window.addEventListener("resize", refreshMode);
