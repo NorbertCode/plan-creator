@@ -13,7 +13,8 @@ export default function ClassBlock({ data, columnTimeStart, columnTimeEnd, colum
     const sideTexts = [useRef(null), useRef(null)];
     useEffect(() => {
         const textHeight = sideTexts[0].current.offsetHeight;
-        const display = textHeight > height ? "inline-block" : "block";
+        const currentDisplay = sideTexts[0].current.children[0].style.display;
+        const display = textHeight > height || currentDisplay == "inline-block" ? "inline-block" : "block";
 
         sideTexts.forEach((sideText) => {
             for (let i = 0; i < sideText.current.children.length; i++) {
