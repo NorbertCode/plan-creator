@@ -4,8 +4,9 @@ import { isDateBetween, timeToFloat } from "./utils.js";
 
 export default function ClassColumn({ day, date, plan, timeStart, timeEnd, height }) {
     function mapToClassBlock(classData, index) {
+        const key = index.toString() + day;
         return (
-            <ClassBlock key={index} data={classData} columnTimeStart={timeStart} columnTimeEnd={timeEnd} columnHeight={height}/>
+            <ClassBlock key={key} data={classData} columnTimeStart={timeStart} columnTimeEnd={timeEnd} columnHeight={height}/>
         );
     }
 
