@@ -7,7 +7,19 @@ import { getFutureDate } from "./utils.js";
 
 
 export default function Page() {
-    const dateIncrement = 1;
+    const [mode, setMode] = useState(window.innerHeight > window.innerWidth ? "single" : "multiple");
+    let dateIncrement = mode == "single" ? 1 : 5;
+    function refreshMode() {
+        if (window.innerHeight > window.innerWidth) {
+            setMode("single");
+            dateIncrement = 1;
+        }
+        else {
+            setMode("week");
+            dateIncrement = 5;
+        }
+    }
+    window.addEventListener("resize", refreshMode);
 
     const [date, setDate] = useState(new Date(Date.now()));
     function moveDate(increment) {
@@ -17,9 +29,11 @@ export default function Page() {
     function incrementDate() { moveDate(dateIncrement); }
     function decrementDate() { moveDate(-dateIncrement); }
 
+
+
     return (
         <main>
-            <ContentTable date={date} mode={"single"}/>
+            <ContentTable date={date} mode={mode}/>
             <div className="controls">
                 <DateSwitch onClick={decrementDate} text="<"/>
                 <DateSwitch onClick={incrementDate} text=">"/>
