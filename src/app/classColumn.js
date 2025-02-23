@@ -2,7 +2,7 @@ import ClassBlock from "./classBlock.js";
 import ColumnHeader from "./columnHeader.js";
 import { isDateBetween, timeToFloat } from "./utils.js";
 
-export default function Column({ day, date, plan, timeStart, timeEnd, height }) {
+export default function ClassColumn({ day, date, plan, timeStart, timeEnd, height }) {
     function mapToClassBlock(classData, index) {
         return (
             <ClassBlock key={index} data={classData} columnTimeStart={timeStart} columnTimeEnd={timeEnd} columnHeight={height}/>
@@ -25,7 +25,7 @@ export default function Column({ day, date, plan, timeStart, timeEnd, height }) 
     }
 
     return (
-        <div className="column">
+        <div className="classColumn">
             <ColumnHeader day={day} date={date}/>
             <div className="columnContent" style={{height: height, background: background}}>
                 {currentDayClasses.map((item, index) => mapToClassBlock(item, index))}
