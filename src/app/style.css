@@ -61,6 +61,7 @@ body {
 
 .classBlock p {
     margin-bottom: 4px;
+    white-space: pre;
 }
 
 .leftSide {
@@ -71,7 +72,6 @@ body {
     float: right;
     text-align: right;
 }
-
 
 .controls {
     display: flex;
