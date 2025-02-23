@@ -50,6 +50,16 @@ body {
     margin: 0;
     padding: 6px;
     text-align: right;
+    align-content: center;
+}
+
+.classBlock p, .timeBlock p {
+    margin: 0;
+    padding: 0;
+}
+
+.classBlock p {
+    margin-bottom: 4px;
 }
 
 .leftSide {
@@ -61,11 +71,6 @@ body {
     text-align: right;
 }
 
-.classBlock p, .timeBlock p {
-    margin: 0;
-    margin-bottom: 4px;
-    padding: 0;
-}
 
 .controls {
     display: flex;
