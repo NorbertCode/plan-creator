@@ -12,12 +12,13 @@ body {
 }
 
 .timeColumn {
-    width: 25vw;
+    text-wrap: nowrap;
+    width: fit-content;
     margin: 0;
 }
 
 .classColumn {
-    width: 75vw;
+    width: 100vw;
 }
 
 .columnHeader {
