@@ -29,8 +29,6 @@ export default function Page() {
     function incrementDate() { moveDate(dateIncrement); }
     function decrementDate() { moveDate(-dateIncrement); }
 
-
-
     return (
         <main>
             <ContentTable date={date} mode={mode}/>
