@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";
 
-import Column from "./column.js";
+import ClassColumn from "./classColumn.js";
 import DateSwitch from "./dateSwitch.js";
 import { formatDate } from "./utils.js";
 import TimeColumn from "./timeColumn.js";
@@ -30,7 +30,7 @@ export default function Page() {
         <main>
             <div className="content">
                 <TimeColumn timeStart={timeStart} timeEnd={timeEnd} height={height}/>
-                <Column day={weekday} date={dateStr} plan={plan} timeStart={timeStart} timeEnd={timeEnd} height={height}/>
+                <ClassColumn day={weekday} date={dateStr} plan={plan} timeStart={timeStart} timeEnd={timeEnd} height={height}/>
             </div>
             <div className="controls">
                 <DateSwitch onClick={decrementDate} text="<"/>
