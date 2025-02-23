@@ -1,37 +1,39 @@
 'use client'
 import { useState } from "react";
 
-import ClassColumn from "./classColumn.js";
 import DateSwitch from "./dateSwitch.js";
-import { formatDate } from "./utils.js";
-import TimeColumn from "./timeColumn.js";
+import ContentTable from "./contentTable.js";
+import { getFutureDate } from "./utils.js";
 
-import plan from "./planData.json";
-
-const date = new Date(Date.now()); // Holds the date as a modifiable object
-let weekday = date.getDay();
 
 export default function Page() {
-    const dateIncrement = 1;
-    const height = 600;
-    const timeStart = 700;
-    const timeEnd = 2100;
+    const [mode, setMode] = useState(window.innerHeight > window.innerWidth ? "single" : "multiple");
+    let dateIncrement = mode == "single" ? 1 : 5;
+    function refreshMode() {
+        if (window.innerHeight > window.innerWidth) {
+            setMode("single");
+            dateIncrement = 1;
+        }
+        else {
+            setMode("week");
+            dateIncrement = 5;
+        }
+    }
+    window.addEventListener("resize", refreshMode);
 
-    const [dateStr, setDate] = useState(formatDate(date));
+    const [date, setDate] = useState(new Date(Date.now()));
     function moveDate(increment) {
-        date.setDate(date.getDate() + increment);
-        weekday = date.getDay();
-        setDate(formatDate(date));
+        const newDate = getFutureDate(date, increment);
+        setDate(newDate);
     }
     function incrementDate() { moveDate(dateIncrement); }
     function decrementDate() { moveDate(-dateIncrement); }
-    
+
+
+
     return (
         <main>
-            <div className="content">
-                <TimeColumn timeStart={timeStart} timeEnd={timeEnd} height={height}/>
-                <ClassColumn day={weekday} date={dateStr} plan={plan} timeStart={timeStart} timeEnd={timeEnd} height={height}/>
-            </div>
+            <ContentTable date={date} mode={mode}/>
             <div className="controls">
                 <DateSwitch onClick={decrementDate} text="<"/>
                 <DateSwitch onClick={incrementDate} text=">"/>
