@@ -19,7 +19,7 @@ export default function Page() {
 
     return (
         <main>
-            <ContentTable weekday={date.getDay()} date={date}/>
+            <ContentTable date={date} mode={"single"}/>
             <div className="controls">
                 <DateSwitch onClick={decrementDate} text="<"/>
                 <DateSwitch onClick={incrementDate} text=">"/>

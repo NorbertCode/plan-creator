@@ -27,6 +27,11 @@ export function getFutureDate(currentDate, incrementDays) {
     return futureDate;
 }
 
+export function getPreviousMonday(date) {
+    const prevMonday = new Date(date);
+    return prevMonday.setDate(prevMonday.getDate() - (prevMonday.getDay() + 6) % 7);
+}
+
 // --- Time functions ---
 export function timeToFloat(time) {
     const hours = Math.floor(time / 100);
