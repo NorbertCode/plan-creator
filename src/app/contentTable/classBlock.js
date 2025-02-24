@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { timeToFloat, timeToStr } from "./utils";
+import { timeToFloat, timeToStr } from "../utility/timeUtils";
 
 export default function ClassBlock({ data, columnTimeStart, columnTimeEnd, columnHeight}) {
     const timeStartFloat = timeToFloat(data.timeStart);

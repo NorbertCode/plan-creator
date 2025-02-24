@@ -1,6 +1,7 @@
-import ClassBlock from "./classBlock.js";
-import ColumnHeader from "./columnHeader.js";
-import { isDateBetween, timeToFloat } from "./utils.js";
+import ClassBlock from "./classBlock";
+import ColumnHeader from "./columnHeader";
+import { isDateBetween } from "../utility/dateUtils";
+import { timeToFloat } from "../utility/timeUtils";
 
 export default function ClassColumn({ day, date, plan, timeStart, timeEnd, height }) {
     function mapToClassBlock(classData, index) {

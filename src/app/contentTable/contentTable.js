@@ -1,8 +1,8 @@
-import ClassColumn from "./classColumn.js";
-import TimeColumn from "./timeColumn.js";
+import ClassColumn from "./classColumn";
+import TimeColumn from "./timeColumn";
+import { formatDate, getFutureDate, getPreviousMonday } from "../utility/dateUtils";
 
-import plan from "./planData.json";
-import { formatDate, getFutureDate, getPreviousMonday } from "./utils.js";
+import plan from "../config/planData.json";
 
 export default function ContentTable({ date, mode }) {
     const height = 600;
