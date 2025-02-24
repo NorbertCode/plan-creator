@@ -10,7 +10,7 @@ If you want to access your plan over the internet I recommend using GitHub Pages
 2. Rename it to `{your_github_name}.github.io`, where `{your_github_name}` is your username on GitHub.
 3. Go to your repository's settings -> Pages and set the source to GitHub Actions.
 4. Modify `/src/app/planData.json` accordingly to fit your needs.
-5. You may also edit timeStart, timeEnd and height in `/src/app/page.js` to adjust the plan table. TimeStart is the hour your classes start and timeEnd when they end. Height is the table's height in pixels.
+5. You may also edit timeStart, timeEnd and height in `/src/app/contentTable.js` to adjust the plan table. TimeStart is the hour your classes start and timeEnd when they end. Height is the table's height in pixels.
 
 ## Modifying the plan
 This is a shortened version of the plan which is included by default:
