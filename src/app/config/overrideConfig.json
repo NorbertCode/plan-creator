@@ -4,5 +4,11 @@
         "filterValue": "1",
         "overrideKey": "name",
         "overrideValue": "Z"
+    },
+    {
+        "filterKey": "type",
+        "filterValue": "2",
+        "overrideKey": "backgroundColor",
+        "overrideValue": "#f00"
     }
 ]

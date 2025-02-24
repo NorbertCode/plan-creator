@@ -8,8 +8,9 @@
                 "timeEnd": 1315,
                 "dateStart": "17.2.2025",
                 "dateEnd": "17.3.2025",
-                "type": "Wykład",
-                "place": "s. 123"
+                "type": "1",
+                "place": "s. 123",
+                "backgroundColor": ""
             }
         ]
     },
@@ -22,7 +23,7 @@
                 "timeEnd": 1600,
                 "dateStart": "17.1.2025",
                 "dateEnd": "17.2.2025",
-                "type": "Ćwiczenia",
+                "type": "2",
                 "place": "s. 456"
             }
         ]
@@ -36,7 +37,7 @@
                 "timeEnd": 1400,
                 "dateStart": "01.01.2025",
                 "dateEnd": "01.12.2025",
-                "type": "C",
+                "type": "2",
                 "place": "s. 789"
             }
         ]

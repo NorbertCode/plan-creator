@@ -38,7 +38,7 @@ export default function ClassBlock({ data, columnTimeStart, columnTimeEnd, colum
     });
 
     return (
-        <div className="classBlock" style={{top: position, height: height}}>
+        <div className="classBlock" style={{top: position, height: height, backgroundColor: data.backgroundColor}}>
             <div ref={sideTexts[0]} className="leftSide">
                 <p>{data.name} </p>
                 <p>{timeToStr(data.timeStart)} - {timeToStr(data.timeEnd)}</p>
