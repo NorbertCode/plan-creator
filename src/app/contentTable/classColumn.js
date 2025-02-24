@@ -9,12 +9,14 @@ export default function ClassColumn({ weekday, date, plan, timeStart, timeEnd, h
     // Background is generated here, because the height an hour is represented by may change
 
     const currentDateClasses = []; // Classes specific to today's date
-    const currentWeekdayClasses = plan.find((day) => day.day == weekday).classes; // Classes which happen on today's weekday
-    currentWeekdayClasses.forEach((dayClass) => {
-        if (isDateBetween(date, dayClass.dateStart, dayClass.dateEnd)) {
-            currentDateClasses.push(dayClass);
-        }
-    });
+    const currentWeekdayClasses = plan.find((day) => day.day == weekday); // Classes which happen on today's weekday
+    if (currentWeekdayClasses != null) {
+        currentWeekdayClasses.classes.forEach((dayClass) => {
+            if (isDateBetween(date, dayClass.dateStart, dayClass.dateEnd)) {
+                currentDateClasses.push(dayClass);
+            }
+        });
+    }
 
     function mapToClassBlock(classData, index) {
         const key = index.toString() + weekday + date;
