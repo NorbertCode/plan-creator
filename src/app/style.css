@@ -42,6 +42,7 @@ body {
     padding: 6px;
     border-radius: 10px;
     font-size: 1.1em;
+    container-type: size;
 }
 
 .timeBlock {
@@ -62,6 +63,13 @@ body {
 .classBlock p {
     margin-bottom: 4px;
     white-space: pre;
+}
+
+@container (height < 50px) {
+    .classBlock p {
+        display: inline-block;
+        font-size: 0.7em;
+    }
 }
 
 .leftSide {
