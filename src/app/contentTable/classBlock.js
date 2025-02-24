@@ -1,13 +1,22 @@
 import { useEffect, useRef } from "react";
 import { timeToFloat, timeToStr } from "../utility/timeUtils";
 
+import overrides from "../config/overrideConfig.json"
+
 export default function ClassBlock({ data, columnTimeStart, columnTimeEnd, columnHeight}) {
+    // Apply overrides from config
+    overrides.forEach((override) => {
+        if (data[override.filterKey] == override.filterValue) {
+            data[override.overrideKey] = override.overrideValue;
+        }
+    });
+
+    // Calculate position in the table and block's height based on when it starts and ends
     const timeStartFloat = timeToFloat(data.timeStart);
     const timeEndFloat = timeToFloat(data.timeEnd)
     const columnTimeStartFloat = timeToFloat(columnTimeStart);
     const columnTimeEndFloat = timeToFloat(columnTimeEnd);
     
-    // Calculate position in the table and block's height based on when it starts and ends
     const position = (timeStartFloat - columnTimeStartFloat) / (columnTimeEndFloat - columnTimeStartFloat) * columnHeight;
     const height = ((timeEndFloat - timeStartFloat) / (columnTimeEndFloat - columnTimeStartFloat)) * columnHeight;
 
