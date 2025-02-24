@@ -1,9 +1,9 @@
 'use client'
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-import DateSwitch from "./dateSwitch.js";
-import ContentTable from "./contentTable.js";
-import { getFutureDate } from "./utils.js";
+import DateSwitch from "./controls/dateSwitch";
+import ContentTable from "./contentTable/contentTable";
+import { getFutureDate } from "./utility/dateUtils";
 
 export default function Page() {
     const [mode, setMode] = useState(typeof window === "undefined" || window.innerHeight > window.innerWidth ? "single" : "multiple");
