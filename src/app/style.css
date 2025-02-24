@@ -42,7 +42,19 @@ body {
     padding: 6px;
     border-radius: 10px;
     font-size: 1.1em;
+    overflow: hidden;
     container-type: size;
+}
+
+@container (height < 50px) {
+    .classBlock p {
+        display: inline-block;
+        font-size: 0.7em;
+    }
+    
+    .description {
+        display: none;
+    }
 }
 
 .timeBlock {
@@ -65,13 +77,6 @@ body {
     white-space: pre;
 }
 
-@container (height < 50px) {
-    .classBlock p {
-        display: inline-block;
-        font-size: 0.7em;
-    }
-}
-
 .leftSide {
     float: left;
 }
@@ -79,6 +84,14 @@ body {
 .rightSide {
     float: right;
     text-align: right;
+}
+
+.description p {
+    clear: both;
+    font-size: 0.8em;
+    word-break: normal;
+    white-space: normal;
+    text-wrap: pretty;
 }
 
 .controls {

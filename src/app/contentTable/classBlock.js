@@ -29,7 +29,7 @@ export default function ClassBlock({ data, columnTimeStart, columnTimeEnd, colum
                 <p>{data.type}</p>
                 <p> {data.place}</p>
             </div>
-            <div className="description" style={{clear: "both"}}>
+            <div className="description">
                 <p>{data.description}</p>
             </div>
         </div>
