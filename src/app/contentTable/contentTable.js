@@ -5,23 +5,25 @@ import { formatDate, getFutureDate, getPreviousMonday } from "../utility/dateUti
 import plan from "../config/planData.json";
 
 export default function ContentTable({ date, mode }) {
-    const height = 600;
-    const timeStart = 700;
-    const timeEnd = 2100;
+    // Configure these as you like
+    const height = 600; // Height of the table in pixels (without headers)
+    const timeStart = 700; // format HHMM
+    const timeEnd = 2100; 
 
-    const days = [];
+    // Create as many columns as needed depending on mode
+    const dayColumns = [];
     const totalDays = mode == "single" ? 1 : 5;
     const startDate = mode == "single" ? date : new Date(getPreviousMonday(date));
     for (let i = 0; i < totalDays; i++) {
-        days.push((
-            <ClassColumn key={i + formatDate(date)} day={startDate.getDay() + i} date={formatDate(getFutureDate(startDate, i))} plan={plan} timeStart={timeStart} timeEnd={timeEnd} height={height}/>
+        dayColumns.push((
+            <ClassColumn key={i + formatDate(date)} weekday={startDate.getDay() + i} date={formatDate(getFutureDate(startDate, i))} plan={plan} timeStart={timeStart} timeEnd={timeEnd} height={height}/>
         ));
     }
 
     return (
         <div className="content">
             <TimeColumn timeStart={timeStart} timeEnd={timeEnd} height={height}/>
-            {days}
+            {dayColumns}
         </div>
     );
 }
