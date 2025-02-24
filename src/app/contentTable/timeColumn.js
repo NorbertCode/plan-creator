@@ -2,6 +2,7 @@ import ColumnHeader from "./columnHeader";
 import TimeBlock from "./timeBlock";
 
 export default function TimeColumn({ timeStart, timeEnd, height }) {
+    // Create as many TimeBlocks as necessary
     const hourAmount = (timeEnd - timeStart) / 100;
     const blockHeight = height / hourAmount;
     const timeBlocks = [];

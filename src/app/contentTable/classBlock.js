@@ -7,9 +7,11 @@ export default function ClassBlock({ data, columnTimeStart, columnTimeEnd, colum
     const columnTimeStartFloat = timeToFloat(columnTimeStart);
     const columnTimeEndFloat = timeToFloat(columnTimeEnd);
     
+    // Calculate position in the table and block's height based on when it starts and ends
     const position = (timeStartFloat - columnTimeStartFloat) / (columnTimeEndFloat - columnTimeStartFloat) * columnHeight;
     const height = ((timeEndFloat - timeStartFloat) / (columnTimeEndFloat - columnTimeStartFloat)) * columnHeight;
 
+    // If the inner text's height is greater than the block's height disable wrapping and change font size
     const sideTexts = [useRef(null), useRef(null)];
     useEffect(() => {
         const textHeight = sideTexts[0].current.offsetHeight;
