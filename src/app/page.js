@@ -1,12 +1,14 @@
 'use client'
 import { useEffect, useState } from "react";
-
 import DateSwitch from "./controls/dateSwitch";
 import ContentTable from "./contentTable/contentTable";
 import { getFutureDate } from "./utility/dateUtils";
 
 export default function Page() {
-    const [mode, setMode] = useState(typeof window === "undefined" || window.innerHeight > window.innerWidth ? "single" : "multiple");
+    // --- Display mode stuff ---
+    // If this run on server-side (which has no window) force single mode
+    // Otherwise decide depending on aspect ratio
+    const [mode, setMode] = useState(typeof window === "undefined" || window.innerHeight > window.innerWidth ? "single" : "week");
     let dateIncrement = mode == "single" ? 1 : 7;
     function refreshMode() {
         if (window.innerHeight > window.innerWidth) {
@@ -22,6 +24,7 @@ export default function Page() {
         window.addEventListener("resize", refreshMode);
     });
 
+    // --- Date stuff ---
     const [date, setDate] = useState(new Date(Date.now()));
     function moveDate(increment) {
         const newDate = getFutureDate(date, increment);
