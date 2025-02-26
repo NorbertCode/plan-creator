@@ -117,8 +117,18 @@ body {
 }
 
 .modalPopup {
-    border: 2px solid black;
     background-color: #4062BB;
+    color: #F1E9DB;
+    border: none;
+    border-radius: 20px;
+    width: 70%;
+    height: 70%;
+    font-size: 1.6em;
+}
+
+.modalPopup .description p {
+    padding-top: 10px;
+    font-size: 0.6em;
 }
 
 .modalPopup::backdrop {
