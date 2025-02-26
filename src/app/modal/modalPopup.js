@@ -12,7 +12,7 @@ export default function ModalPopup({ data, ref }) {
                 <p> {data.place}</p>
             </div>
             <div className="description">
-                <p>{data.description}</p>
+                <p dangerouslySetInnerHTML={{__html: data.description}}></p>
             </div>
         </dialog>
     );
