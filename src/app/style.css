@@ -115,3 +115,13 @@ body {
     background-color: #292626;
     border-color: #231F20;
 }
+
+.modalPopup {
+    border: 2px solid black;
+    background-color: #4062BB;
+}
+
+.modalPopup::backdrop {
+    background-color: #000;
+    opacity: 35%;
+}

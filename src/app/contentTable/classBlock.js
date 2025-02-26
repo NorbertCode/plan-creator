@@ -1,6 +1,8 @@
+import { useRef } from "react";
 import { timeToFloat, timeToStr } from "../utility/timeUtils";
 
 import overrides from "../config/overrideConfig.json"
+import ModalPopup from "../modal/modalPopup";
 
 export default function ClassBlock({ data, columnTimeStart, columnTimeEnd, columnHeight}) {
     // Apply overrides from config
@@ -19,8 +21,13 @@ export default function ClassBlock({ data, columnTimeStart, columnTimeEnd, colum
     const position = (timeStartFloat - columnTimeStartFloat) / (columnTimeEndFloat - columnTimeStartFloat) * columnHeight;
     const height = ((timeEndFloat - timeStartFloat) / (columnTimeEndFloat - columnTimeStartFloat)) * columnHeight;
 
+    const modalPopup = useRef(null);
+    function showModal() {
+        modalPopup.current.showModal();
+    }
+
     return (
-        <div className="classBlock" style={{top: position, height: height, backgroundColor: data.backgroundColor}}>
+        <div className="classBlock" onClick={showModal} style={{top: position, height: height, backgroundColor: data.backgroundColor}}>
             <div className="leftSide">
                 <p>{data.name} </p>
                 <p>{timeToStr(data.timeStart)} - {timeToStr(data.timeEnd)}</p>
@@ -32,6 +39,7 @@ export default function ClassBlock({ data, columnTimeStart, columnTimeEnd, colum
             <div className="description">
                 <p>{data.description}</p>
             </div>
+            <ModalPopup ref={modalPopup} data={data}/>
         </div>
     );
 }
