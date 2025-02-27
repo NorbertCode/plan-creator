@@ -133,7 +133,8 @@ body {
     color: #F1E9DB;
     border: none;
     border-radius: 20px;
-    width: 70%;
+    width: 75vh;
+    max-width: 70%;
     max-height: 70%;
     font-size: 1.6em;
 }
