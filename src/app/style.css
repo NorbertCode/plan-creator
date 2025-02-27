@@ -44,9 +44,10 @@ body {
     font-size: 1.1em;
     overflow: hidden;
     container-type: size;
+    container-name: classBlock;
 }
 
-@container (height < 50px) {
+@container classBlock (height < 50px) {
     .classBlock p {
         display: inline-block;
         font-size: 0.7em;
@@ -67,12 +68,12 @@ body {
     align-content: center;
 }
 
-.classBlock p, .timeBlock p {
+.classBlock p, .timeBlock p, .modalPopup p {
     margin: 0;
     padding: 0;
 }
 
-.classBlock p {
+.classBlock p, .modalPopup p {
     margin-bottom: 4px;
     white-space: pre;
 }
