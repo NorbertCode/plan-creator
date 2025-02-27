@@ -110,11 +110,22 @@ body {
     height: 5vh;
     margin: 1vh 1vw 0 1vw;
     border-radius: 10px;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .dateSwitch:active {
     background-color: #292626;
     border-color: #231F20;
+}
+
+.dateSwitch:hover, .modalButton:hover, .classBlock:hover {
+    cursor: pointer;
 }
 
 .modalPopup {
