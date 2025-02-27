@@ -22,11 +22,11 @@ export default function ClassBlock({ data, columnTimeStart, columnTimeEnd, colum
     return (
         <div className="classBlock" onMouseDown={() => onClick(data)} style={{top: position, height: height, backgroundColor: data.backgroundColor}}>
             <div className="leftSide">
-                <p>{data.name} </p>
+                <p><strong>{data.name} </strong></p>
                 <p>{timeToStr(data.timeStart)} - {timeToStr(data.timeEnd)}</p>
             </div>
             <div className="rightSide">
-                <p>{data.type}</p>
+                <p><strong>{data.type}</strong></p>
                 <p> {data.place}</p>
             </div>
             <div className="description">
