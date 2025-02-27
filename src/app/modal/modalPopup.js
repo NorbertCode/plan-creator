@@ -11,7 +11,7 @@ export default function ModalPopup({ data, ref }) {
     }
 
     return (
-        <dialog ref={ref} className="modalPopup">
+        <dialog ref={ref} className="modalPopup" style={{backgroundColor: data.backgroundColor}}>
             <div className="leftSide">
                 <p><strong>{data.name} </strong></p>
                 <p>{timeToStr(data.timeStart)} - {timeToStr(data.timeEnd)}</p>
