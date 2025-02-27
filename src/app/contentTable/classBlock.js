@@ -20,7 +20,7 @@ export default function ClassBlock({ data, columnTimeStart, columnTimeEnd, colum
     const height = ((timeEndFloat - timeStartFloat) / (columnTimeEndFloat - columnTimeStartFloat)) * columnHeight;
 
     return (
-        <div className="classBlock" onPointerDown={() => onClick(data)} style={{top: position, height: height, backgroundColor: data.backgroundColor}}>
+        <div className="classBlock" onMouseDown={() => onClick(data)} style={{top: position, height: height, backgroundColor: data.backgroundColor}}>
             <div className="leftSide">
                 <p>{data.name} </p>
                 <p>{timeToStr(data.timeStart)} - {timeToStr(data.timeEnd)}</p>
