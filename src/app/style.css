@@ -141,10 +141,11 @@ body {
     background: rgba(0, 0, 0, 0.10);
     color: #F1E9DB;
     width: 80%;
-    height: 3vh;
+    height: 4vh;
     display: block;
     margin: 3vh auto 0 auto;
+    padding: 1vh 0 1vh 0;
     border: none;
     border-radius: 10px;
-    font-size: 0.6em;
+    font-size: 0.8em;
 }
