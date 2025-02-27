@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { timeToFloat, timeToStr } from "../utility/timeUtils";
 
 import overrides from "../config/overrideConfig.json"
@@ -27,7 +27,7 @@ export default function ClassBlock({ data, columnTimeStart, columnTimeEnd, colum
     }
 
     return (
-        <div className="classBlock" onClick={showModal} style={{top: position, height: height, backgroundColor: data.backgroundColor}}>
+        <div className="classBlock" onPointerDown={showModal} style={{top: position, height: height, backgroundColor: data.backgroundColor}}>
             <div className="leftSide">
                 <p>{data.name} </p>
                 <p>{timeToStr(data.timeStart)} - {timeToStr(data.timeEnd)}</p>
