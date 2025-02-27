@@ -44,9 +44,10 @@ body {
     font-size: 1.1em;
     overflow: hidden;
     container-type: size;
+    container-name: classBlock;
 }
 
-@container (height < 50px) {
+@container classBlock (height < 50px) {
     .classBlock p {
         display: inline-block;
         font-size: 0.7em;
@@ -67,12 +68,12 @@ body {
     align-content: center;
 }
 
-.classBlock p, .timeBlock p {
+.classBlock p, .timeBlock p, .modalPopup p {
     margin: 0;
     padding: 0;
 }
 
-.classBlock p {
+.classBlock p, .modalPopup p {
     margin-bottom: 4px;
     white-space: pre;
 }
@@ -114,4 +115,36 @@ body {
 .dateSwitch:active {
     background-color: #292626;
     border-color: #231F20;
+}
+
+.modalPopup {
+    background-color: #4062BB;
+    color: #F1E9DB;
+    border: none;
+    border-radius: 20px;
+    width: 70%;
+    max-height: 70%;
+    font-size: 1.6em;
+}
+
+.modalPopup .description p {
+    padding-top: 10px;
+    font-size: 0.6em;
+}
+
+.modalPopup::backdrop {
+    background-color: #000;
+    opacity: 35%;
+}
+
+.modalButton {
+    background: rgba(0, 0, 0, 0.10);
+    color: #F1E9DB;
+    width: 80%;
+    height: 3vh;
+    display: block;
+    margin: 3vh auto 0 auto;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.6em;
 }

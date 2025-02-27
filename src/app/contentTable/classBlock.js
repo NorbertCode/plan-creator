@@ -2,7 +2,7 @@ import { timeToFloat, timeToStr } from "../utility/timeUtils";
 
 import overrides from "../config/overrideConfig.json"
 
-export default function ClassBlock({ data, columnTimeStart, columnTimeEnd, columnHeight}) {
+export default function ClassBlock({ data, columnTimeStart, columnTimeEnd, columnHeight, onClick }) {
     // Apply overrides from config
     overrides.forEach((override) => {
         if (data[override.filterKey] == override.filterValue) {
@@ -20,7 +20,7 @@ export default function ClassBlock({ data, columnTimeStart, columnTimeEnd, colum
     const height = ((timeEndFloat - timeStartFloat) / (columnTimeEndFloat - columnTimeStartFloat)) * columnHeight;
 
     return (
-        <div className="classBlock" style={{top: position, height: height, backgroundColor: data.backgroundColor}}>
+        <div className="classBlock" onMouseDown={() => onClick(data)} style={{top: position, height: height, backgroundColor: data.backgroundColor}}>
             <div className="leftSide">
                 <p>{data.name} </p>
                 <p>{timeToStr(data.timeStart)} - {timeToStr(data.timeEnd)}</p>
