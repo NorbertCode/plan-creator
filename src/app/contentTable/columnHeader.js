@@ -1,11 +1,13 @@
+import { getText } from "../utility/languageUtils";
+
 const days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday"
+    "sunday",
+    "monday",
+    "tuesday",
+    "wednesday",
+    "thursday",
+    "friday",
+    "saturday"
 ];
 
 export default function ColumnHeader({ day, date }) {
@@ -15,7 +17,7 @@ export default function ColumnHeader({ day, date }) {
 
     return (
         <div className="columnHeader">
-            <p>{dayName} {date}</p>
+            <p>{getText(dayName)} {date}</p>
         </div>
     );
 }
