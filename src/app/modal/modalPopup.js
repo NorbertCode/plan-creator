@@ -23,7 +23,7 @@ export default function ModalPopup({ data, ref }) {
                 <p dangerouslySetInnerHTML={{__html: data.description}}></p>
             </div>
             <button autoFocus style={{position: "absolute", top: 0, left: 0, opacity: 0}}></button>
-            <button onFocus={closeModal}>Close</button>
+            <button className="modalButton" onFocus={closeModal}>Close</button>
         </dialog>
     );
 }

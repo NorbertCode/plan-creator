@@ -135,3 +135,15 @@ body {
     background-color: #000;
     opacity: 35%;
 }
+
+.modalButton {
+    background: rgba(0, 0, 0, 0.10);
+    color: #F1E9DB;
+    width: 80%;
+    height: 3vh;
+    display: block;
+    margin: 3vh auto 0 auto;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.6em;
+}
