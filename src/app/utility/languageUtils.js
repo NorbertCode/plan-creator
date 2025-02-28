@@ -1,6 +1,6 @@
 import languageConfig from '../config/languageConfig';
 
-const language = navigator.language.slice(0, 2);
+const language = typeof window !== "undefined" ? navigator.language.slice(0, 2) : undefined;
 const fallbackLanguage = "en";
 
 export function getText(key) {
