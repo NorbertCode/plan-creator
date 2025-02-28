@@ -24,16 +24,18 @@ export default function ContentTable({ date, mode }) {
 
     const [modalData, setModalData] = useState({})
     const modalPopup = useRef(null);
+    const wrapperRef = useRef(null);
     function showModal(data) {
         setModalData(data);
         modalPopup.current.showModal();
+        wrapperRef.current.style.display = "block";
     }
 
     return (
         <div className="content">
             <TimeColumn timeStart={timeStart} timeEnd={timeEnd} height={height}/>
             {dayColumns}
-            <ModalPopup ref={modalPopup} data={modalData}/>
+            <ModalPopup modalRef={modalPopup} wrapperRef={wrapperRef} data={modalData}/>
         </div>
     );
 }
