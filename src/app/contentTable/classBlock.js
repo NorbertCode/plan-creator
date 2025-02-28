@@ -30,7 +30,7 @@ export default function ClassBlock({ data, columnTimeStart, columnTimeEnd, colum
                 <p> {data.place}</p>
             </div>
             <div className="description">
-                <p>{data.description}</p>
+                <p dangerouslySetInnerHTML={{__html: data.description}}></p>
             </div>
         </div>
     );
