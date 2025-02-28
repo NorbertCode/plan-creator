@@ -1,4 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeInAnimation {
+    animation: fadeIn 0.1s forwards;
+}
+
+.fadeOutAnimation {
+    animation: fadeIn 0.1s forwards;
+    animation-direction: reverse;
+}
+
 body {
     background-color: #141313;
     color: #F1E9DB;
@@ -25,6 +44,7 @@ body {
     text-align: center;
     height: 5vh;
     font-size: 1.2em;
+    animation: fadeIn 0.5s;
 }
 
 .columnContent {
@@ -137,6 +157,7 @@ body {
     max-width: 70%;
     max-height: 70%;
     font-size: 1.6em;
+    animation: inherit;
 }
 
 .modalPopup .description p {
@@ -151,8 +172,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #000;
-    opacity: 35%;
+    background-color: rgba(0, 0, 0, 0.35);
 }
 
 .modalButton {

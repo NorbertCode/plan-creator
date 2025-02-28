@@ -29,6 +29,10 @@ export default function ContentTable({ date, mode }) {
         setModalData(data);
         modalPopup.current.showModal();
         wrapperRef.current.style.display = "block";
+        wrapperRef.current.classList.add("fadeInAnimation");
+        setTimeout(() => {
+            wrapperRef.current.classList.remove("fadeInAnimation");
+        }, 100);
     }
 
     return (

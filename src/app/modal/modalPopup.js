@@ -12,8 +12,13 @@ export default function ModalPopup({ data, modalRef, wrapperRef }) {
     //    So stopPropagation() has to be used in the inner wrapper
     
     function closeModal() {
-        modalRef.current.close();
-        wrapperRef.current.style.display = "none";
+        wrapperRef.current.classList.add("fadeOutAnimation");
+        void wrapperRef.current.offsetWidth;
+        setTimeout(() => {
+            modalRef.current.close();
+            wrapperRef.current.style.display = "none";
+            wrapperRef.current.classList.remove("fadeOutAnimation");
+        }, 100);
     }
 
     return (
