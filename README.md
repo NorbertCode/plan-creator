@@ -1,5 +1,13 @@
 # Plan Creator
-A webpage written in React, which reads data about your classes from a .json file and visualises them.
+A webpage written in React, which parses data about your classes from a .json file and visualises them.
+
+Features date-based filtering, responsive UI and modals for class blocks.
+
+## Screenshots
+
+Desktop | Mobile
+---|---
+<img width="374" height="150" alt="image" src="https://github.com/user-attachments/assets/9acc5e5b-2c2a-4068-8d83-3915d50e0cae" /> <br> <img width="374" height="150" alt="image" src="https://github.com/user-attachments/assets/da978ae7-1409-44e4-a43e-1693740809c8" /> | <img width="203" height="423" alt="image" src="https://github.com/user-attachments/assets/7e6a8344-9e14-4cb5-a3ec-f865a80ec9fa" /> <img width="203" height="423" alt="image" src="https://github.com/user-attachments/assets/bac98df6-5f1b-47b6-9eb0-39cce9dca76c" />
 
 ## Usage
 To set this up locally simply clone this repository, build `npm run build` and start the server `npm run start`.
