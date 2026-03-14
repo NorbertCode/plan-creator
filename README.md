@@ -5,9 +5,27 @@ Features date-based filtering, responsive UI and modals for class blocks.
 
 ## Screenshots
 
-Desktop | Mobile
----|---
-<img width="374" height="150" alt="image" src="https://github.com/user-attachments/assets/9acc5e5b-2c2a-4068-8d83-3915d50e0cae" /> <br> <img width="374" height="150" alt="image" src="https://github.com/user-attachments/assets/da978ae7-1409-44e4-a43e-1693740809c8" /> | <img width="203" height="423" alt="image" src="https://github.com/user-attachments/assets/7e6a8344-9e14-4cb5-a3ec-f865a80ec9fa" /> <img width="203" height="423" alt="image" src="https://github.com/user-attachments/assets/bac98df6-5f1b-47b6-9eb0-39cce9dca76c" />
+<table width="100%">
+  <thead>
+    <tr>
+      <th width="50%">Desktop</th>
+      <th width="50%">Mobile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td valign="center">
+        <img width="100%" alt="image" src="https://github.com/user-attachments/assets/9acc5e5b-2c2a-4068-8d83-3915d50e0cae" />
+        <br><br>
+        <img width="100%" alt="image" src="https://github.com/user-attachments/assets/da978ae7-1409-44e4-a43e-1693740809c8" />
+      </td>
+      <td valign="top" align="center">
+        <img width="48%" alt="image" src="https://github.com/user-attachments/assets/7e6a8344-9e14-4cb5-a3ec-f865a80ec9fa" />
+        <img width="48%" alt="image" src="https://github.com/user-attachments/assets/bac98df6-5f1b-47b6-9eb0-39cce9dca76c" />
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Usage
 To set this up locally simply clone this repository, build `npm run build` and start the server `npm run start`.
